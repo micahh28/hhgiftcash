@@ -2,7 +2,7 @@
   <div>
     <van-search
       v-model="value"
-       show-action
+      show-action
       shape="round"
       background="#4fc08d"
       placeholder="请输入搜索关键词"
