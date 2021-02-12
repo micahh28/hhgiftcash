@@ -1,3 +1,6 @@
+本项目需要配合
+服务端： https://github.com/micahh28/HHGiftCashApi
+
 # hhgiftcash
 
 ## Project setup
