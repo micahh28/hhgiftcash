@@ -1,13 +1,13 @@
 <template>
-    <div>
-<div>我的</div>
-    </div>
+	<div>
+		<div>我的</div>
+	</div>
 </template>
 
 <script>
-    export default {
-
-    }
+	export default {
+		name: "Profile",
+	}
 </script>
 
 <style lang="scss" scoped>

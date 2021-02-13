@@ -1,16 +1,19 @@
 <template>
   <div>
     <div>
-      <van-nav-bar fixed title="联系人" @click-right="onClickRight">
+      <van-nav-bar fixed placeholder title="联系人" @click-right="onClickRight">
         <template #right>
           <van-icon name="plus" size="18" />
         </template>
       </van-nav-bar>
     </div>
-    <dir>
-      <van-index-bar>
+	<div>
+		<van-search v-model="value" placeholder="请输入搜索关键词" />
+	</div>
+    <div>
+      <van-index-bar :sticky="false">
         <van-index-anchor index="A" />
-        <van-cell title="张三" />
+        <van-cell title="曹晶晶" />
         <van-cell title="张三" />
         <van-cell title="张三" />
 
@@ -34,12 +37,12 @@
         <van-cell title="张三" />
         <van-cell title="张三" />
       </van-index-bar>
-    </dir>
+    </div>
   </div>
 </template>
 
 <script>
-import { IndexBar, IndexAnchor, Cell } from "vant";
+import { IndexBar, IndexAnchor, Cell ,Search} from "vant";
 
 export default {
   name: "Friends",
@@ -47,12 +50,15 @@ export default {
     [IndexBar.name]: IndexBar,
     [IndexAnchor.name]: IndexAnchor,
     [Cell.name]: Cell,
+	[Search.name]: Search,
   },
   methods: {
     onClickRight() {},
   },
   data() {
-    return {};
+    return {
+		value: '',
+	};
   },
 };
 </script>

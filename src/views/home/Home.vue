@@ -8,9 +8,10 @@
       placeholder="请输入搜索关键词"
     >
       <template #action>
-        <div @click="onSearch">搜索</div>
+        <span @click="onSearch">搜索</span>
       </template>
     </van-search>
+	
   </div>
 </template>
 
