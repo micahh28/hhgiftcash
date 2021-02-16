@@ -4,7 +4,7 @@
 		<router-view />
 
 		<!-- Tabbar -->
-		<van-tabbar v-model="active" active-color="#ee0a24" inactive-color="#000">
+		<van-tabbar fixed placeholder v-model="active" active-color="#ee0a24" inactive-color="#000">
 			<van-tabbar-item name="Home" icon="home-o" to="/home">首页</van-tabbar-item>
 			<van-tabbar-item name="Giftbook" icon="balance-list-o" to="/giftbook">礼簿</van-tabbar-item>
 			<van-tabbar-item name="Friends" icon="friends-o" to="/friends">联系人</van-tabbar-item>
@@ -16,16 +16,11 @@
 <script>
 	import Vue from "vue";
 	import {
-		NavBar
-	} from "vant";
-	import {
+		NavBar,
 		Tabbar,
-		TabbarItem
-	} from "vant";
-	import {
+		TabbarItem,
 		Icon
-	} from 'vant';
-
+	} from "vant";
 
 	Vue.use(NavBar);
 	Vue.use(Tabbar);
@@ -38,18 +33,21 @@
 
 		},
 		computed: {
-			active() {
-				return this.$route.name
+			active: {
+				get: function() {
+					return this.$route.name
+				},
+				set: function() {}
 			}
 		},
-		data() {
-			return {
-
-			};
-		},
-		
+		// data() {
+		// 	return {
+		// 		active: this.$route.name,
+		// 	};
+		// },
 	};
 </script>
 
 <style>
+	@import "assets/css/base.css";
 </style>

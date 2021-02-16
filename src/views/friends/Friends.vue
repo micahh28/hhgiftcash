@@ -13,7 +13,7 @@
     <div>
       <van-index-bar :sticky="false">
         <van-index-anchor index="A" />
-        <van-cell title="曹晶晶" />
+        <van-cell title="张三" />
         <van-cell title="张三" />
         <van-cell title="张三" />
 
