@@ -35,6 +35,15 @@ a {
 	text-decoration: none;
 }
 
+.app-body {
+	height: 100vh;
+	position: relative;
+	z-index: 2;
+  }
+
+.app-content{
+	margin-left: 20px; margin-right: 20px
+  }
 
 .clear-fix::after {
 	clear: both;

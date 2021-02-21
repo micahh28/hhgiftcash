@@ -8,27 +8,62 @@ const routes = [
   {
     path: '/',
     name: 'Home',
+    meta: {
+      showTab: true//是否显示Tabbar
+    },
     component: Home
   },
   {
     path: '/home',
     name: 'Home',
+    meta: {
+      showTab: true//是否显示Tabbar
+    },
     component: Home
   },
   {
     path: '/profile',
     name: 'Profile',
+    meta: {
+      showTab: true//是否显示Tabbar
+    },
     component: () => import('../views/profile/profile.vue')
   },
   {
     path: '/friends',
     name: 'Friends',
+    meta: {
+      showTab: true//是否显示Tabbar
+    },
     component: () => import('../views/friends/Friends.vue')
   },
   {
     path: '/giftbook',
     name: 'Giftbook',
+    meta: {
+      showTab: true//是否显示Tabbar
+    },
     component: () => import('../views/giftbook/Giftbook.vue')
+  },
+  {
+    path: '/friendshipbook',
+    name: 'FriendshipBook',
+    component: () => import('../views/giftbook/FriendshipBook.vue')
+  },
+  {
+    path: '/billbook',
+    name: 'BillBook',
+    component: () => import('../views/giftbook/BillBook.vue')
+  },
+  {
+    path: '/detail',
+    name: 'Detail',
+    component: () => import('../views/detail/Detail.vue')
+  },
+  {
+    path: '/detailform',
+    name: 'DetailForm',
+    component: () => import('../views/detail/DetailForm.vue')
   }
 ]
 
