@@ -19,7 +19,7 @@
 
      <!-- 头部总计 -->
     <div class="app-content">
-      <div class="summary">
+      <div class="summary-bill">
         <van-row type="flex" justify="center">
           <van-col span="12">
             <br />
@@ -165,10 +165,10 @@ export default {
 </script>
 
 <style>
-.summary {
+.summary-bill {
   margin: 20px 0 20px 0;
   padding: 24px;
-  background-image: url(../../assets/img/giftbook/bg_summary.png);
+  background-image: url(../../assets/img/giftbook/bg_summary_bill.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -moz-background-size: 100% 100%;

@@ -45,7 +45,7 @@
         <van-tab title="账簿" name="bill">
           <!-- 内容 -->
           <div class="app-content">
-            <div class="summary">
+            <div class="summary-bill">
               <van-row type="flex" justify="center">
                 <van-col span="12">
                   <br />
@@ -185,7 +185,15 @@ export default {
   -moz-background-size: 100% 100%;
   color: #ffffff;
 }
-
+.summary-bill {
+  margin: 20px 0 20px 0;
+  padding: 24px;
+  background-image: url(../../assets/img/giftbook/bg_summary_bill.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  color: #ffffff;
+}
 .book {
   padding: 32px 24px 50px 24px;
   background-image: url(../../assets/img/giftbook/bg_book.png);
