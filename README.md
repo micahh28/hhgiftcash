@@ -1,6 +1,3 @@
-本项目需要配合
-服务端： https://github.com/micahh28/HHGiftCashApi
-
 # 人情往来礼簿 
 
 > 本项目需要配合，服务端： https://github.com/micahh28/HHGiftCashApi
@@ -29,10 +26,6 @@ npm run docs
 ## Changelog
 
 每个版本的详细更改记录在此.
-
-## Stay In Touch
-
-- For latest releases and announcements, follow on Twitter: [@vuejs](https://twitter.com/vuejs)
 
 ## License
 
