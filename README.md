@@ -20,8 +20,9 @@
 ## 目录
 
 - [上手指南](#上手指南)
-  - [安装步骤](#安装步骤)
-  - [传送门](#传送门)
+  - [克隆项目](#克隆项目)
+  - [前端WebApp项目](#前端WebApp项目)
+  - [后端WebApi项目](#后端WebApi项目)
 - [文件目录说明](#文件目录说明)
 - [使用到的框架](#使用到的框架)
 - [更新日志](#更新日志)
@@ -31,12 +32,14 @@
 
 ### 上手指南
 
-###### **安装步骤**
+###### **克隆项目**
+```bash
+git clone https://github.com/micahh28/hhgiftcash.git
+```
+
+###### **前端WebApp项目**
 
 ```bash
-# 克隆项目
-git clone https://github.com/micahh28/hhgiftcash.git
-
 # 安装依赖
 npm install
 
@@ -46,8 +49,18 @@ npm run serve
 # 构建生成环境
 npm run build
 ```
-###### **传送门**
- *本项目需要配套后端项目： https://github.com/micahh28/HHGiftCashApi*
+
+###### **后端WebApi项目**
+
+```bash
+#  Visual Studio 打开项目
+WebApp项目由Visual Studio 2019开发
+
+# Visual Studio运行本地服务 
+localhost:****
+
+# 发布项目至ISS
+```
 
 ### 文件目录说明
 
@@ -55,18 +68,24 @@ npm run build
 hhgiftcash 
 ├── LICENSE.txt
 ├── README.md
-├── babel.config.js
-├── package-lock.json
-├── /src/
-│  ├── App.vue
-│  ├── main.js
-│  ├── /assets/
-│  ├── /router/
-│  ├── /store/
-│  ├── /views/
-├── /public/
-│  ├── index.html
-│  └── favicon.ico
+├── /WebApp/--前端web项目
+│  ├── /src/
+│  │  ├── App.vue
+│  │  ├── main.js
+│  │  ├── /assets/
+│  │  ├── /router/
+│  │  ├── /store/
+│  │  ├── /views/
+│  ├── /public/
+│  │  ├── index.html
+│  │  └── favicon.ico
+│  ├── babel.config.js
+│  ├── package-lock.json
+├── /WebApi/--后端Api项目
+│  ├── /HHGiftCash.Data/
+│  ├── /HHGiftCash.Entity/
+│  ├── /HHGiftCash.Util/
+│  ├── /HHGiftCashApi/
 ```
 
 ### 使用到的框架
