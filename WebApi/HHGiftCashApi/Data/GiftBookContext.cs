@@ -1,6 +1,6 @@
 ﻿using HH_Utility.DBFramework;
 
-namespace HHGiftCash.Data
+namespace HHGiftCashApi.Data
 {
     public class GiftBookContext : DbHandleBase
     {

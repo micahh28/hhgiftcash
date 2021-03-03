@@ -169,9 +169,14 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Data\BillDetailContext.cs" />
+    <Compile Include="Data\GiftBookContext.cs" />
+    <Compile Include="Data\UserContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BillDetail.cs" />
+    <Compile Include="Models\GiftBook.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -227,7 +232,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Util\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -257,16 +262,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HHGiftCash.Data\HHGiftCash.Data.csproj">
-      <Project>{BE927BA6-598B-43EF-BD22-665CDF07D9DC}</Project>
-      <Name>HHGiftCash.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HHGiftCash.Entity\HHGiftCash.Entity.csproj">
-      <Project>{9dda7724-c6dc-4484-9413-222385ac9ac1}</Project>
-      <Name>HHGiftCash.Entity</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,7 +1,7 @@
 ﻿using Dapper.Contrib.Extensions;
 using System;
 
-namespace HHGiftCash.Entity
+namespace HHGiftCashApi.Models
 {
     [Table("GiftBook")]
     public class GiftBook

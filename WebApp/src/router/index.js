@@ -7,11 +7,9 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    meta: {
-      showTab: true//是否显示Tabbar
-    },
-    component: Home
+    redirect: {
+      name: 'Home'
+    }
   },
   {
     path: '/home',
