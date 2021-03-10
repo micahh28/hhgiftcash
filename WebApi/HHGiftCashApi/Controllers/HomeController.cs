@@ -11,7 +11,7 @@ namespace HHGiftCashApi.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-
+            ViewBag.StartTime = WebApiApplication.startTime;
             return View();
         }
     }

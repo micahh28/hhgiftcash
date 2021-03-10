@@ -1,24 +1,63 @@
-﻿<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-        is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/Content/flipclock.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div id="box">
+        <div id="content">
+            <div class="clock" id="flipclock"></div>
+            <h2 class="date" id='ShowMessage'></h2>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
-    </div>
-</div>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/flipclock.js"></script>
+    <script type="text/javascript">
+        // mobile
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            document.getElementById('flipclock').setAttribute("style", "zoom:1.5;");
+            document.getElementById('ShowMessage').setAttribute("style", "zoom:1.5;");
+        }
+
+        var clock;
+
+        $(document).ready(function () {
+            clock = $('.clock').FlipClock({
+                clockFace: 'TwelveHourClock',
+                showSeconds: false
+            });
+        });
+
+        var date1 = '@ViewBag.StartTime';  //开始时间
+
+        function show_date_time() {
+            window.setTimeout("show_date_time()", 1000);
+            var date2 = new Date();
+            timeold = date2.getTime() - new Date(date1).getTime();;
+            sectimeold = timeold / 1000
+            secondsold = Math.floor(sectimeold);
+            msPerDay = 24 * 60 * 60 * 1000
+            e_daysold = timeold / msPerDay
+            daysold = Math.floor(e_daysold);
+            e_hrsold = (e_daysold - daysold) * 24;
+            hrsold = Math.floor(e_hrsold);
+            e_minsold = (e_hrsold - hrsold) * 60;
+            minsold = Math.floor((e_hrsold - hrsold) * 60);
+            seconds = Math.floor((e_minsold - minsold) * 60);
+            document.getElementById('ShowMessage').innerHTML = "我已经运行了 - " + daysold + " 天 " + hrsold + " 小时 " + minsold + " 分 " + seconds + " 秒 ";
+        }
+        show_date_time();
+
+    </script>
+
+</body>
+</html>

@@ -11,6 +11,7 @@ namespace HHGiftCashApi
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
+        public static DateTime startTime = DateTime.Now;
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -18,6 +19,7 @@ namespace HHGiftCashApi
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
         }
     }
 }
