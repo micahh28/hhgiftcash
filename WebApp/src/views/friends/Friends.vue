@@ -7,9 +7,9 @@
         </template>
       </van-nav-bar>
     </div>
-	<div>
-		<van-search v-model="value" placeholder="请输入搜索关键词" />
-	</div>
+    <div>
+      <van-search v-model="value" placeholder="请输入搜索关键词" />
+    </div>
     <div>
       <van-index-bar :sticky="false">
         <van-index-anchor index="A" />
@@ -42,25 +42,30 @@
 </template>
 
 <script>
-import { IndexBar, IndexAnchor, Cell ,Search} from "vant";
+  import {
+    IndexBar,
+    IndexAnchor,
+    Cell,
+    Search
+  } from "vant";
 
-export default {
-  name: "Friends",
-  components: {
-    [IndexBar.name]: IndexBar,
-    [IndexAnchor.name]: IndexAnchor,
-    [Cell.name]: Cell,
-	[Search.name]: Search,
-  },
-  methods: {
-    onClickRight() {},
-  },
-  data() {
-    return {
-		value: '',
-	};
-  },
-};
+  export default {
+    name: "Friends",
+    components: {
+      [IndexBar.name]: IndexBar,
+      [IndexAnchor.name]: IndexAnchor,
+      [Cell.name]: Cell,
+      [Search.name]: Search,
+    },
+    methods: {
+      onClickRight() {},
+    },
+    data() {
+      return {
+        value: '',
+      };
+    },
+  };
 </script>
 
 <style lang="scss" scoped>

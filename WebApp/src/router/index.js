@@ -4,8 +4,7 @@ import Home from '../views/home/Home.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     redirect: {
       name: 'Home'
@@ -15,7 +14,7 @@ const routes = [
     path: '/home',
     name: 'Home',
     meta: {
-      showTab: true//是否显示Tabbar
+      showTab: true //是否显示Tabbar
     },
     component: Home
   },
@@ -23,7 +22,7 @@ const routes = [
     path: '/profile',
     name: 'Profile',
     meta: {
-      showTab: true//是否显示Tabbar
+      showTab: true //是否显示Tabbar
     },
     component: () => import('../views/profile/profile.vue')
   },
@@ -31,7 +30,7 @@ const routes = [
     path: '/friends',
     name: 'Friends',
     meta: {
-      showTab: true//是否显示Tabbar
+      showTab: true //是否显示Tabbar
     },
     component: () => import('../views/friends/Friends.vue')
   },
@@ -39,7 +38,7 @@ const routes = [
     path: '/giftbook',
     name: 'Giftbook',
     meta: {
-      showTab: true//是否显示Tabbar
+      showTab: true //是否显示Tabbar
     },
     component: () => import('../views/giftbook/Giftbook.vue')
   },
@@ -62,6 +61,11 @@ const routes = [
     path: '/detailform',
     name: 'DetailForm',
     component: () => import('../views/detail/DetailForm.vue')
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/Account/Login.vue')
   }
 ]
 
