@@ -9,5 +9,7 @@ namespace HHGiftCashApi.Data
 
         public BillDetailContext(string connectStr) : base(connectStr) { }
         #endregion
+
+
     }
 }
